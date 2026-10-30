@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "quill"
+version = "0.2.0"
+description = "Local daemon and CLI assistant for PDF ingestion, Obsidian note generation, and space-efficient note versioning."
+readme = "README.md"
+requires-python = ">=3.10"
+# Lower bounds are the versions Quill is developed and tested against;
+# requirements.txt pins them exactly for a reproducible install.
+dependencies = [
+    "click>=8.1",
+    "langchain-core>=1.0",
+    "langchain-ollama>=1.0",
+    "langchain-text-splitters>=1.0",
+    "langchain-chroma>=1.0",
+    "chromadb>=1.0",
+    "pymupdf4llm>=1.0",
+    "watchdog>=6.0",
+    "windows-toasts>=1.3; sys_platform == 'win32'",
+]
+
+[project.optional-dependencies]
+test = ["pytest>=8"]
+
+[project.scripts]
+quill = "quill.cli:cli"
+
+[tool.setuptools.packages.find]
+include = ["quill*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

@@ -1,4 +1,21 @@
+# Personal data: your notes, your PDFs, your chat history. Never commit these.
+obsidian_vault/
+pdf_drop/
 chat_history.db
 notes_db.sqlite
-obsidian_vault/
+.quill/
+*.pdf
+
+# Python build/test artifacts
+__pycache__/
+*.pyc
+*.egg-info/
+build/
+dist/
+.pytest_cache/
 venv/
+.venv/
+
+# Editor/IDE settings
+.idea/
+.vscode/
