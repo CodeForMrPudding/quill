@@ -1,0 +1,12 @@
+# Exact versions Quill was last tested with. For a normal install use:
+#   pip install -e .        (or: pip install -e ".[test]" to run the tests)
+click==8.4.2
+langchain-core==1.4.9
+langchain-ollama==1.1.0
+langchain-text-splitters==1.1.2
+langchain-chroma==1.1.0
+chromadb==1.5.9
+pymupdf4llm==1.28.0
+watchdog==6.0.0
+windows-toasts==1.3.1; sys_platform == "win32"
+pytest==9.1.1
